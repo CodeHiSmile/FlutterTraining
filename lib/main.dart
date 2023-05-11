@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_training/ui/chapter_3/food_screen.dart';
+import 'package:flutter_training/ui/chapter_4/exercise_image.dart';
+import 'package:flutter_training/ui/chapter_5/login_film_screen.dart';
+import 'package:flutter_training/ui/chapter_6/default/movie_home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,7 +51,40 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => FoodScreen(),
+                    builder: (context) => const FoodScreen(),
+                  ),
+                );
+              },
+            ),
+            _buildButton(
+              title: "Chương 4",
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ExerciseImageScreen(),
+                  ),
+                );
+              },
+            ),
+            _buildButton(
+              title: "Chương 5",
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const LoginFilmScreen(),
+                  ),
+                );
+              },
+            ),
+            _buildButton(
+              title: "Chương 6",
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MovieHomeScreen(),
                   ),
                 );
               },
@@ -79,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Center(
             child: Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 18,
               ),
